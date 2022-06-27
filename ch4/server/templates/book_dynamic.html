@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>책 소개 사이트</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" />
+</head>
+
+<body>
+    <header>
+        <div id="loginLink">
+            {% if g.user %}
+            <a class="subbtn" href="/logout">로그아웃</a>
+            <a class="subbtn" href="/reset">초기화</a>
+            {% else %}
+            <a class="subbtn" href="/login">로그인</a>
+            {% endif %}
+        </div>
+        <a href="https://jpub.tistory.com/" target="_blank">
+            <img src="{{url_for('static', filename='img/logo.png')}}">
+        </a>
+        <h1>최근에 펴낸 책</h1>
+        <div id="cnt">[[책 권수]]</div>
+    </header>
+    <div id="button-group">
+        <a class="mainbtn" href="/downcsv">CSV 다운로드</a>
+        {% if g.user %}
+        <form method="POST" action="/addbook" enctype="multipart/form-data">
+            <input type="checkbox" id="checkbtn" />
+            <label class="mainbtn" for="checkbtn">책 추가하기</label>
+            <span class="inputbox">
+                <input type="text" name="ntitle" placeholder="책 제목 ('\'으로 줄바꿈)">
+                <input type="text" name="ndate" placeholder="출간 일자 (ex. yyyy년 mm월)">
+                <input type="text" name="nprice" placeholder="책 가격 (ex. 10,000)">
+                <input type="file" name="file">
+                <input type="submit" id="addbtn">
+                <label class="subbtn" for="addbtn">업로드</label>
+            </span>
+        </form>
+        {% endif %}
+    </div>
+    <section id="gallery-section">
+        {%for book in blist%}
+        <div id={{book[0]}} class="item">
+            <div class="image"><img src="{{url_for('static', filename='img/'+book[4])}}"></div>
+            <div class="text">
+                <div class="title">
+                    {%for title in book[1].split('\\')%}
+                    <div>{{title}}</div>
+                    {%endfor%}
+                </div>
+                <div class="date">{{book[2]}}</div>
+                <div class="price">{{book[3]}}</div>
+            </div>
+        </div>
+        {%endfor%}
+    </section>
+    <script>
+        var cntnum = document.getElementsByClassName('item').length;
+        document.getElementById('cnt').innerText = cntnum; 
+    </script>
+</body>
+
+</html>

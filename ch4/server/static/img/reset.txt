@@ -1,0 +1,11 @@
+book1.png
+book2.png
+book3.png
+book4.png
+book5.png
+book6.png
+book7.png
+book8.png
+logo.png
+default.png
+reset.txt

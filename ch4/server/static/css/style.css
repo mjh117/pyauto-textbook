@@ -1,0 +1,174 @@
+body {
+  padding: 0px 40px 40px 40px; 
+  min-width: 500px;
+  margin: 0;
+  background: #f2f2f2;
+}
+/* 메소드 테스트 */
+.mResult{
+  width: 735px;
+  height: 180px;
+  border: 1px solid black;
+  padding: 10px;
+  margin-top: 10px;
+}
+.mResult li{
+  list-style:none;
+}
+/* 로그인 */
+#loginForm{
+  width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid black;
+}
+#loginForm .mainbtn {
+  margin: 20px;
+}
+#loginLink {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+/* 헤더 */
+header {
+  width: 100%;
+  height: 200px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header img {
+  border-radius: 100%;
+  height: 60px;
+  width: 60px;
+  background-color: rgba(94, 94, 94, 0.05);
+  border:1px solid rgba(83, 83, 83, 0.25);
+  padding: 0.2em;
+  margin: 0 1em;
+}
+
+header #cnt {
+  background-color:rgba(94, 92, 92, 0.25);
+  color: white;
+  text-align: center;
+  border-radius: 30%;
+  border: 1px solid gray;
+  padding: 2px;
+  margin: 4px;
+  height: 15px;
+  line-height: 15px;
+}
+
+/* 버튼 */
+#button-group {
+  width: 100%;
+  min-height: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.mainbtn{
+  padding: 10px 20px; 
+  width: 100px;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  background-color:#333333;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.subbtn {
+  padding: 7px 5px;
+  display: inline-block;
+  text-decoration: none;
+  border:#7c7c7c 1px solid;
+  color: #7c7c7c;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+input {
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-bottom: 2px rgb(78, 78, 78) solid;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-top: 5px;
+}
+
+#checkbtn, #addbtn, #loginbtn, #getbtn, #postbtn {
+  display: none;
+}
+.inputbox {
+  display: none;
+}
+.inputbox input{
+  width: 250px;
+}
+#checkbtn:checked ~ .inputbox {
+  display: inline-block;
+} 
+
+/* 갤러리 */
+#gallery-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1em;
+}
+
+.item {
+  position: relative;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  min-height: 250;
+  padding-top: 100%;
+}
+.item:hover .text {
+  opacity: 1;
+}
+.item:hover .image img {
+  filter: blur(3px);
+}
+
+.image {
+  width: 100%; height: 100%;
+  position: absolute; top: 0; left: 0;
+  overflow: hidden;
+  line-height: 0;
+}
+.image img{
+  position: absolute; top:0; left: 0;
+  width: 100%;
+}
+
+.text {
+  position: absolute; top: 0; left: 0;
+  z-index: 1;
+  width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(13, 77, 39, 0.4);
+  color: white;
+  text-align: center;
+  opacity: 0;
+}
+.text .title {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 0.5em;
+}
+.text .title.meta {
+  display: none;
+}
+
+

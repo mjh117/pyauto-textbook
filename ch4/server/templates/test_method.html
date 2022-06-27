@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>Method Test Page</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+</head>
+
+<body>
+    <h1>GET/POST 테스트</h1>
+    <form method="GET" action="/reqinfo" name="getForm">
+        <input type="text" name="fir" placeholder="첫 번째 쿼리 스트링" id="getFir" value="query1">
+        <input type="text" name="sec" placeholder="두 번째 쿼리 스트링" id="getSec" value="query2">
+        <input type="submit" id="getbtn">
+        <label class="mainbtn" for="getbtn">GET</label>
+    </form>
+    <div class="mResult" id="gResult">[[GET 결과]]</div>
+    <br>
+    <form method="POST" action="/reqinfo" name="postForm">
+        <input type="text" name="fir" placeholder="첫 번째 바디 데이터" id="postFir" value="data1">
+        <input type="text" name="sec" placeholder="두 번째 바디 데이터" id="postSec" value="data2">
+        <input type="submit" id="postbtn">
+        <label class="mainbtn" for="postbtn">POST</label>
+    </form>
+    <div class="mResult" id="pResult">[[POST 결과]]</div>
+    <br>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('form[name=getForm]').submit(function (event) {
+                $.ajax({
+                    type: 'GET',
+                    url: "/reqinfo",
+                    data: { "fir": $('input[id=getFir]').val(), "sec": $('input[id=getSec]').val() },
+                    dataType: 'json',
+                }).success(function (data) {
+                    str = "<strong>GET Request 정보</strong>"
+                    $.each(data, function (i, item) {
+                        str += `<div>${i} : ${JSON.stringify(item)}</div>`;
+                    });
+                    $('#gResult').html(str);
+                });
+                event.preventDefault();
+            });
+
+            $('form[name=postForm]').submit(function (event) {
+                $.ajax({
+                    type: 'POST',
+                    url: "/reqinfo",
+                    data: { "fir": $('input[id=postFir]').val(), "sec": $('input[id=postSec]').val() },
+                    dataType: 'json',
+                }).success(function (data) {
+                    str = "<strong>POST Request 정보</strong>"
+                    $.each(data, function (i, item) {
+                        str += `<div>${i} : ${JSON.stringify(item)}</div>`;
+                    });
+                    $('#pResult').html(str);
+                });
+                event.preventDefault();
+            });
+
+            $("#getbtn").trigger("click");
+            $("#postbtn").trigger("click");
+        });
+    </script>
+</body>
+
+</html>

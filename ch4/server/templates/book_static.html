@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>책 소개 사이트</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+</head>
+
+<body>
+    <header>
+        <a href="https://jpub.tistory.com/" target="_blank">
+            <img src="../static/img/logo.png">
+        </a>
+        <h1>최근에 펴낸 책</h1>
+        <div id="cnt">[[책 권수]]</div>
+    </header>
+    <section id="gallery-section">
+        <div id="b1" class="item">
+            <div class="image"><img src="../static/img/book1.png"></div>
+            <div class="text">
+                <div class="title">도커, 컨테이너 빌드업!</div>
+                <div class="date">출간 2021년 12월</div>
+                <div class="price">정가 28,000원</div>
+            </div>
+        </div>
+        <div id="b2" class="item">
+            <div class="image"><img src="../static/img/book2.png"></div>
+            <div class="text">
+                <div class="title">
+                    <div>파이썬 머신러닝</div>
+                    <div>실무 테크닉 100</div>
+                </div>
+                <div class="date">출간 2021년 12월</div>
+                <div class="price">정가 25,000원</div>
+            </div>
+        </div>
+        <div id="b3" class="item">
+            <div class="image"><img src="../static/img/book3.png"></div>
+            <div class="text">
+                <div class="title">
+                    <div>코드로 배우는</div>
+                    <div>인공지능</div>
+                </div>
+                <div class="date">출간 2021년 11월</div>
+                <div class="price">정가 25,000원</div>
+            </div>
+        </div>
+        <div id="b4" class="item">
+            <div class="image"><img src="../static/img/book4.png"></div>
+            <div class="text">
+                <div class="title">
+                    <div>가볍게 떠먹는</div>
+                    <div>데이터 분석 프로젝트</div>
+                </div>
+                <div class="date">출간 2021년 11월</div>
+                <div class="price">정가 19,800원</div>
+            </div>
+        </div>
+        <div id="b5" class="item">
+            <div class="image"><img src="../static/img/book5.png"></div>
+            <div class="text">
+                <div class="title">DNS 실전 교과서</div>
+                <div class="date">출간 2021년 11월</div>
+                <div class="price">정가 28,000원</div>
+            </div>
+        </div>
+        <div id="b6" class="item">
+            <div class="image"><img src="../static/img/book6.png"></div>
+            <div class="text">
+                <div class="title">
+                    <div>임파워드</div>
+                    <div>:평범한 사람들이 만드는</div>
+                    <div>특별한 제품</div>
+                </div>
+                <div class="date">출간 2021년 10월</div>
+                <div class="price">정가 25,000원</div>
+            </div>
+        </div>
+        <div id="b7" class="item">
+            <div class="image"><img src="../static/img/book7.png"></div>
+            <div class="text">
+                <div class="title">
+                    <div>디자인,</div>
+                    <div>이렇게 하면 되나요?</div>
+                </div>
+                <div class="date">출간 2021년 09월</div>
+                <div class="price">정가 19,800원</div>
+            </div>
+        </div>
+        <div id="b8" class="item">
+            <div class="image"><img src="../static/img/book8.png"></div>
+            <div class="text">
+                <div class="title">
+                    <div>레시피로 배우는</div>
+                    <div>아두이노 쿡북</div>
+                </div>
+                <div class="date">출간 2021년 09월</div>
+                <div class="price">정가 40,000원</div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var cntnum = document.getElementsByClassName('item').length;
+        document.getElementById('cnt').innerText = cntnum            
+    </script>
+</body>
+
+</html>
