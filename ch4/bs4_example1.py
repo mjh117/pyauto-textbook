@@ -17,7 +17,7 @@ result =[
     e.contents,
     list(e.children),
     e.previous_sibling,
-    e.next_siblings,
+    e.next_sibling,
     e.previous_element,
     e.title.next_element
     ]
