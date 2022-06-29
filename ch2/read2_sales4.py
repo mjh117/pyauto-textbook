@@ -2,7 +2,7 @@ import openpyxl as excel
 
 # 매출 내역 문서를 열고 시트 가져오기
 book = excel.load_workbook(
-    "input/monthly_sales.xlsx", data_only=True)
+    "input/monthly_sales2.xlsx", data_only=True)
 sheet = book.active
 
 # A3부터 F999(적당히 큰 범위)를 얻기 --- (1)
