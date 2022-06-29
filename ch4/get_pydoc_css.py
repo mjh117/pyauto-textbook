@@ -88,7 +88,7 @@ def save_file(url, text):
     with open(fname, "wt", encoding="utf-8") as f:
         f.write(text)
     print('[파일 저장] ::' ,fname)
-    time.sleep(0.1) # 대기
+    time.sleep(1) # 대기
 
 if __name__ == '__main__':
     download_pydoc(pydoc_url) # 최초 페이지 탐색
