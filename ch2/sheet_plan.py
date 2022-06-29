@@ -9,7 +9,7 @@ for row in sheet.iter_rows(min_row=3):
     cells = [v.value for v in row]
     if cells[0] is None: break
     print(cells)
-    # 읽어온 고객 정보를 튜플 변수에 저장 --- (2a)
+    # 읽어온 고객 정보를 변수에 저장 --- (2a)
     (name,area,plan) = cells
     # 붙여넣을 시트 이름을 정하기 --- (2b)
     sname = plan+"플랜"
