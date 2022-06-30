@@ -4,7 +4,7 @@ import tkinter.messagebox as mb
 import tkinter.filedialog as fd
 import tkinter.simpledialog as sd
 
-# tkinter 윈도우 숨기기
+# tkinter 창 숨기기
 tk.Tk().withdraw()
 
 # 정보 대화상자

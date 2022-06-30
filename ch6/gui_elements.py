@@ -24,7 +24,7 @@ layout = [
      ], 
     [sg.Button('값 표시')],
 ]
-# 윈도우 생성
+# 창 생성
 window = sg.Window('다양한 입력 요소', layout)
 
 # 이벤트 루프 작성 --- (2)
@@ -37,5 +37,5 @@ while True:
         for i in range(7): 
             window['re'+str(i)].update(values[i]) #--- (3b)
             
-# 윈도우 닫기
+# 창 닫기
 window.close()

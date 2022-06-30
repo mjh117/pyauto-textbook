@@ -1,7 +1,7 @@
 import tkinter as tk
 import tkinter.messagebox as mb
 
-# tkinter 윈도우 숨기기 --- (1)
+# tkinter 창 숨기기 --- (1)
 tk.Tk().withdraw()
 
 # 메시지 표시 --- (2)

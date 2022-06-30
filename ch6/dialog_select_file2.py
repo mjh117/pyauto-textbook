@@ -2,7 +2,7 @@ import tkinter as tk
 import tkinter.messagebox as mb
 import tkinter.filedialog as fd
 
-# tkinter 윈도우 숨기기
+# tkinter 창 숨기기
 tk.Tk().withdraw()
 
 # 초기 폴더 및 확장자 지정 --- (1)

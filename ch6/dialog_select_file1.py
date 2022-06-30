@@ -2,7 +2,7 @@ import tkinter as tk
 import tkinter.messagebox as mb
 import tkinter.filedialog as fd
 
-# tkinter 윈도우 숨기기
+# tkinter 창 숨기기
 tk.Tk().withdraw()
 
 # 파일 선택 대화상자 띄우기 --- (1)

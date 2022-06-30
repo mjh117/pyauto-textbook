@@ -1,7 +1,7 @@
 import tkinter as tk
 import tkinter.messagebox as mb
 
-# 윈도우 숨기기 --- (1)
+# 창 숨기기 --- (1)
 tk.Tk().withdraw()
 
 # 질문 대화상자 표시 --- (2)
