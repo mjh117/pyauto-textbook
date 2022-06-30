@@ -10,7 +10,7 @@ thisyear =  datetime.datetime.now().year
 
 # 1행에 헤더 설정 --- (2)
 sheet["A1"] = "출생 연도"
-sheet["B1"] = "세는 나이"
+sheet["B1"] = "세는나이"
 sheet["C1"] = "만 나이 (생일 후)"
 sheet["D1"] = "만 나이 (생일 전)"
 
