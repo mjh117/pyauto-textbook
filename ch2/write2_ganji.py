@@ -41,7 +41,7 @@ for i in range(100):
     sheet.cell(row=(2+i), column=1, value=str(year)+'년')
     sheet.cell(row=(2+i), column=2, value=ganji)
     sheet.cell(row=(2+i), column=3, value=col_ani)
-    print(year,"=", ganji, ",", col_ani) #IDLE 쉘 창에 연도·간지 정보 출력
+    print(year,"=", ganji, ",", col_ani) #IDLE 셸 창에 연도·간지 정보 출력
 
 # 파일 저장 --- (7)
 book.save("output/write2_ganji.xlsx")
