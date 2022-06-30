@@ -9,7 +9,7 @@ target_url = URL
 
 # 메인 처리 --- (1)
 def download_images():
-    # 페이지의 HTML 취득 --- (1a) 
+    # 페이지의 HTML 읽기 --- (1a) 
     html = requests.get(target_url).text
     # HTML을 분석하여 이미지 URL 추출 --- (1b)
     urls = get_url(html)

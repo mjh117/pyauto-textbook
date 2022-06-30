@@ -4,7 +4,7 @@ from _MyPath import URL
 # 이미지 파일 URL
 url = URL+'static/img/book1.png'
 
-# URL 리소스 취득 --- (1)
+# URL 리소스 읽기 --- (1)
 res = requests.get(url)
 
 # 성공 여부 체크 --- (2)

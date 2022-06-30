@@ -16,7 +16,7 @@ win = sg.Window('리소스 사용 예제', layout)
 
 # 이벤트 루프 --- (3)
 while True:
-    # 이벤트에 대한 파라미터 취득
+    # 이벤트에 대한 파라미터 얻기
     event, val = win.read()
     # 창 종료 버튼을 눌렀을 때
     if event in ('Exit', 'Quit', None): break

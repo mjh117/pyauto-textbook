@@ -5,7 +5,7 @@ from _MyPath import URL
 # 이미지를 가져올 페이지
 target_url = URL
 
-# HTML을 취득하고 Beautiful Soup로 분석 --- (1)
+# HTML을 읽고 Beautiful Soup로 분석 --- (1)
 html = requests.get(target_url).text
 soup = BeautifulSoup(html, 'html5lib')
 

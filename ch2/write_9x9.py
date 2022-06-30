@@ -8,7 +8,7 @@ sheet = book.active
 # 시트에 구구단 숫자 채우기 --- (3)
 for y in range(1,10):
     for x in range(1,10):
-        # y행 x열 셀을 취득 --- (4)
+        # y행 x열 셀을 읽기 --- (4)
         cell = sheet.cell(row=y, column=x)
         # 셀에 데이터 쓰기 --- (5)
         cell.value = x * y
