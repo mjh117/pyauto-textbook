@@ -9,7 +9,7 @@ def gen_booklist_reset():
       html_str = fp.read()
     soup = BeautifulSoup(html_str, 'html5lib')
 
-    # CSS 셀렉터로 책 목록 얻기 --- (*2)
+    # CSS 선택자로 책 목록 얻기 --- (*2)
     booklist = []
     # 갤러리에서 item 얻기
     item_list = soup.select('#gallery-section > .item')

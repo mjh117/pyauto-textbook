@@ -11,6 +11,6 @@ item = soup.find('div', id='b1')
 p = item.find(class_='price')
 print(p.string)
 
-# CSS 셀렉터로 검색하기 --- (2)
+# CSS 선택자로 검색하기 --- (2)
 p = soup.select_one('#b1 .price')
 print(p.string)
