@@ -34,9 +34,9 @@ def get_bookinfo():
         #contents = li.select_one('div.prod_author_group>div>div').contents
         #author = ' '.join(map(lambda t: t.text, list(filter(lambda c: hasattr(c, 'text'), contents))))
         # 출간일 --- (4a)
-        info['date'] = li.select_one('span.date').string
+        info['date'] = li.select_one('span.date').string[:-3]
         # 가격
-        info['price'] = li.select_one('span.price_normal>s').string
+        info['price'] = li.select_one('span.price_normal>s').string[:-1]
         # 이미지 --- (4b)
         save_file = './output/{}.jpg'.format(re.sub(r'[/\\?%*:|"<>]', '_', title))
         info['img']= os.path.abspath(save_file)
